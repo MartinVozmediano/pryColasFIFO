@@ -14,6 +14,7 @@ public class Cola {
 
     public void agregar(Pasajero p) throws IllegalArgumentException {
         boolean valido = false;
+
         if (p == null) {
             throw new IllegalArgumentException("El pasajero no puede ser nulo");
         } else {
@@ -21,6 +22,12 @@ public class Cola {
         }
 
         // TODO R1: validar nombre, asiento entre 1 y 30 y asiento no repetido.
+
+        if(p.getNombre() == null || p.getNombre().isEmpty() || p.getNombre().isBlank()){
+            throw new IllegalArgumentException("El nombre es invalido, verifique si esta escrito correctamente");
+        }else{
+            valido = true;
+        }
 
         if (p.getNumeroAsiento() < 1 || p.getNumeroAsiento() > 30) {
             throw new IllegalArgumentException("El numero de asiento debe estar entre 1 y 30");
