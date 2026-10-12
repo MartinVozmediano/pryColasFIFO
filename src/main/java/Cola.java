@@ -12,15 +12,36 @@ public class Cola {
         coleccion = new LinkedList<>();
     }
 
-    public void agregar(Pasajero p) {
+    public void agregar(Pasajero p) throws IllegalArgumentException {
+        boolean valido = false;
         if (p == null) {
             throw new IllegalArgumentException("El pasajero no puede ser nulo");
+        } else {
+            valido = true;
         }
 
         // TODO R1: validar nombre, asiento entre 1 y 30 y asiento no repetido.
+
+        if (p.getNumeroAsiento() < 1 || p.getNumeroAsiento() > 30) {
+            throw new IllegalArgumentException("El numero de asiento debe estar entre 1 y 30");
+        } else {
+            valido = true;
+        }
+
+        for (Pasajero ver : coleccion) {
+            if (ver.getNumeroAsiento() == p.getNumeroAsiento()) {
+                throw new IllegalArgumentException("El asiento ya está tomado");
+            } else {
+                valido = true;
+            }
+        }
+
         // Validar ANTES de modificar la colección.
 
-        coleccion.offer(p);
+
+        if (valido == true) {
+            coleccion.offer(p);
+        }
     }
 
     public Pasajero extraer() {
