@@ -78,13 +78,31 @@ public class Cola {
     }
 
     public Pasajero buscarPorAsiento(int asiento) {
-        // TODO R2: validar rango y buscar sin retirar pasajeros.
-        throw new UnsupportedOperationException("Pendiente implementar R2: búsqueda");
+        validarRangoAsiento(asiento);
+        for (Pasajero pasajero : coleccion) {
+            if (pasajero.getNumeroAsiento() == asiento) {
+                return pasajero;
+            }
+        }
+        return null;
     }
 
     public int posicionPorAsiento(int asiento) {
-        // TODO R2: posiciones desde 1; devolver -1 si no está en la fila.
-        throw new UnsupportedOperationException("Pendiente implementar R2: posición");
+        validarRangoAsiento(asiento);
+        int posicion = 1;
+        for (Pasajero pasajero : coleccion) {
+            if (pasajero.getNumeroAsiento() == asiento) {
+                return posicion;
+            }
+            posicion++;
+        }
+        return -1;
+    }
+
+    private void validarRangoAsiento(int asiento) {
+        if (asiento < 1 || asiento > 30) {
+            throw new IllegalArgumentException("El asiento debe estar entre 1 y 30");
+        }
     }
 
     public Pasajero cancelarPorAsiento(int asiento) {
