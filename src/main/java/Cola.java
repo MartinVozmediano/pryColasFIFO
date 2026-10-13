@@ -106,8 +106,27 @@ public class Cola {
     }
 
     public Pasajero cancelarPorAsiento(int asiento) {
-        // TODO R3: retirar únicamente al indicado y conservar el orden restante.
-        throw new UnsupportedOperationException("Pendiente implementar R3: cancelación");
+            // 1. Reutilizamos la validación de rango (lanza IllegalArgumentException si falla)
+            validarRangoAsiento(asiento);
+
+            Pasajero pasajeroEncontrado = null;
+
+            // 2. Buscamos al pasajero en la cola de espera
+            for (Pasajero p : coleccion) {
+                if (p.getNumeroAsiento() == asiento) {
+                    pasajeroEncontrado = p;
+                    break; // Lo encontramos, salimos del bucle
+                }
+            }
+
+            // 3. Validar si realmente estaba en la fila
+            if (pasajeroEncontrado == null) {
+                throw new NoSuchElementException("El pasajero con ese asiento no está en la fila");
+            }
+
+            // Por ahora retornamos null
+            return null;
+        }
     }
 
     @Override
