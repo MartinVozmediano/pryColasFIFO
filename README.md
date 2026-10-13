@@ -144,7 +144,17 @@ Las pruebas verifican el modelo; esta demostración comprueba que los botones mu
 
 | Integrante | Usuario de GitHub | Qué desarrolló | Enlace a su commit |
 |---|---|---|---|
-| Por completar | Por completar | Por completar | Por completar |
+| Martín Vozmediano | MartinVozmediano | Creacion del Repositorio y validaciones y restricciones de R1 | https://github.com/MartinVozmediano/pryColasFIFO/commit/3c8061cca2ef16f65d73b09df15c3d43e9d8fe65 https://github.com/MartinVozmediano/pryColasFIFO/commit/44d2a6bb2352a881d7d52bdf039f43a2c1384fb1 https://github.com/MartinVozmediano/pryColasFIFO/commit/8fca048ef9534ed99973545b5f6c7f435de34cfc |
+| Leonardo Tapia | LeonardoTapia7 | Busqueda de pasajeros por posicion y asiento de R2 | https://github.com/MartinVozmediano/pryColasFIFO/commit/aa82b3a849cb37f59bcf95129ec654c6598beb1a |
+| Francisco Costa | FranciscoCostaN | Validaciones de rango y existencia para la cancelacion de pasajeros R3 | https://github.com/MartinVozmediano/pryColasFIFO/commit/79bd89f53c389daa05f77265678ec95c717adeb4 https://github.com/MartinVozmediano/pryColasFIFO/commit/b5e7d6c719c4dead0f422dd2008853426146209b https://github.com/MartinVozmediano/pryColasFIFO/commit/9eb1eb8ed68e861ddd737f1d925ffdd1d4b1d038 |
+| Pablo Jimenez | Pabloj1235 | Documentacion del proyecto en formato Javadoc para metodos de R2 | https://github.com/MartinVozmediano/pryColasFIFO/commit/f04337fd4b959cd166e11b6f1278521f4f1e25c2 |
+
+Evidencia de tests completos y pasados:
+
+<img width="1365" height="767" alt="image" src="https://github.com/user-attachments/assets/44118cef-f94e-41c3-b959-df38131db2b6" />
+
+<img width="1365" height="767" alt="image" src="https://github.com/user-attachments/assets/a5eb3d05-a559-4e07-b3be-2d1783be5264" />
+
 
 Cada estudiante debe subir su aporte con su cuenta y comprobar que GitHub lo muestre como autor. Si utilizan Git local, el correo configurado debe estar asociado a esa cuenta. No compartir cuentas. No es obligatorio usar ramas o pull requests: pueden trabajar por turnos e integrar sus cambios, conservando los aportes individuales.
 
