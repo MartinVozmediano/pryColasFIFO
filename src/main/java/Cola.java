@@ -14,7 +14,6 @@ public class Cola {
 
     public void agregar(Pasajero p) throws IllegalArgumentException {
         boolean valido = false;
-
         if (p == null) {
             throw new IllegalArgumentException("El pasajero no puede ser nulo");
         } else {
@@ -106,27 +105,26 @@ public class Cola {
     }
 
     public Pasajero cancelarPorAsiento(int asiento) {
-            // 1. Reutilizamos la validación de rango (lanza IllegalArgumentException si falla)
-            validarRangoAsiento(asiento);
+        // 1. Reutilizamos la validación de rango (lanza IllegalArgumentException si falla)
+        validarRangoAsiento(asiento);
 
-            Pasajero pasajeroEncontrado = null;
+        Pasajero pasajeroEncontrado = null;
 
-            // 2. Buscamos al pasajero en la cola de espera
-            for (Pasajero p : coleccion) {
-                if (p.getNumeroAsiento() == asiento) {
-                    pasajeroEncontrado = p;
-                    break; // Lo encontramos, salimos del bucle
-                }
+        // 2. Buscamos al pasajero en la cola de espera
+        for (Pasajero p : coleccion) {
+            if (p.getNumeroAsiento() == asiento) {
+                pasajeroEncontrado = p;
+                break; // Lo encontramos, salimos del bucle
             }
-
-            // 3. Validar si realmente estaba en la fila
-            if (pasajeroEncontrado == null) {
-                throw new NoSuchElementException("El pasajero con ese asiento no está en la fila");
-            }
-
-            // Por ahora retornamos null
-            return null;
         }
+
+        // 3. Validar si realmente estaba en la fila
+        if (pasajeroEncontrado == null) {
+            throw new NoSuchElementException("El pasajero con ese asiento no está en la fila");
+        }
+
+        // Por ahora retornamos null (se completa en el siguiente commit)
+        return null;
     }
 
     @Override
