@@ -12,6 +12,16 @@ public class Cola {
         coleccion = new LinkedList<>();
     }
 
+
+    /**
+     * Requerimiento 1 (R1): Registra un pasajero en la cola manteniendo el orden FIFO.
+     * Valida que el objeto y el nombre no sean nulos o vacíos.
+     * Comprueba que el asiento esté en el rango permitido (1-30).
+     * Evita la duplicidad iterando la colección antes de la inserción.
+     *
+     * @param p Objeto Pasajero a encolar.
+     * @throws IllegalArgumentException si alguna validación de datos o negocio falla.
+     */
     public void agregar(Pasajero p) throws IllegalArgumentException {
         boolean valido = false;
         if (p == null) {
