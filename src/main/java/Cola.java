@@ -75,7 +75,12 @@ public class Cola {
     public List<Pasajero> obtenerPendientes() {
         return Collections.unmodifiableList(new ArrayList<>(coleccion));
     }
-
+    /**
+     * Requerimiento 2 (R2): Busca un pasajero en espera sin extraerlo de la fila.
+     *
+     * @param asiento Número de asiento a buscar.
+     * @return El objeto Pasajero si existe, o null en caso contrario.
+     */
     public Pasajero buscarPorAsiento(int asiento) {
         validarRangoAsiento(asiento);
         for (Pasajero pasajero : coleccion) {
@@ -85,7 +90,12 @@ public class Cola {
         }
         return null;
     }
-
+    /**
+     * Requerimiento 2 (R2): Calcula la posición actual de un asiento en la fila FIFO.
+     *
+     * @param asiento Número de asiento a consultar.
+     * @return Entero con la posición (inicia en 1), o -1 si no está en la fila.
+     */
     public int posicionPorAsiento(int asiento) {
         validarRangoAsiento(asiento);
         int posicion = 1;
