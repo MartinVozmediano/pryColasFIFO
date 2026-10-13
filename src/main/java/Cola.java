@@ -123,8 +123,11 @@ public class Cola {
             throw new NoSuchElementException("El pasajero con ese asiento no está en la fila");
         }
 
-        // Por ahora retornamos null (se completa en el siguiente commit)
-        return null;
+        // 4. Retiramos únicamente al indicado.
+        // remove(Object) conserva el orden relativo del resto de la cola FIFO.
+        coleccion.remove(pasajeroEncontrado);
+
+        return pasajeroEncontrado;
     }
 
     @Override
